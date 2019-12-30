@@ -64,32 +64,6 @@
 	    <input type="text" class="form-control" placeholder="Masukkan nama anda">
 	  </div>
 
-	  <div class="form-group">
-	    <label>Nama Surat</label>
-	    <input type="text" class="form-control" placeholder="Masukkan nama surat">
-	  </div>
-
-		<div>
-	  	<label>Jenis Surat</label>
-	  	</div>
-	  	
-	  	<div class="dropdown">
-
-		<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Pilih Jenis Surat
-		</a>
-
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-		    <a class="dropdown-item" href="#">Berita Acara Penjelasan</a>
-		    <a class="dropdown-item" href="#">Berita Acara Siap Operasi (BASO)</a>
-		    <a class="dropdown-item" href="#">Berita Acara Delete Order (BADO)</a>
-		    <a class="dropdown-item" href="#">Surat Keluar</a>
-		    <a class="dropdown-item" href="#">P0/P1</a>
-		    <a class="dropdown-item" href="#">Surat Penawaran</a>
-		</div>
-	  </div>
-
-
 	  <div style="margin-top: 15px;">
 	  	<label>Unggah Surat</label>
 	  </div>
