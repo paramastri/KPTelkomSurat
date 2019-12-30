@@ -123,7 +123,7 @@
 	  </div>
 
 
-	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Generate Nomor Surat</button>
+	  <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="nomor.php">Generate Nomor Surat</a>
 	</form>
 
 </body>

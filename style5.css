@@ -124,11 +124,18 @@ a, a:hover, a:focus {
     background: #e00025;
 }
 
+.modal.fade{
+-webkit-transition:opacity .3s linear, top .3s ease-out;
+-moz-transition:opacity .3s linear, top .3s ease-out;
+-ms-transition:opacity .3s linear, top .3s ease-out;
+-o-transition:opacity .3s linear, top .3s ease-out;
+transition:opacity .3s linear, top .3s ease-out;
+top:-25%;}
 
-a[data-toggle="collapse"] {
+/*a[data-toggle="collapse"] {
     position: relative;
 }
-
+*/
 
 
 ul ul a {
