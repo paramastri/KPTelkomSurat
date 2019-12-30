@@ -48,8 +48,9 @@
 <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
+        		<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-                <h3>Menu</h3>
+                <h3></h3>
             </div>
 
             <ul style="margin-left: 10px;" class="list-unstyled">
@@ -91,9 +92,9 @@
             </nav>
 
 
-	<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
 
-	<div  style="margin: 0 auto; margin-top: 100px; width: 80%; font-family:'GothamRounded-Medium';">
+
+	<div  style="margin-left: 90px; margin-top: 100px; width: 80%; font-family:'GothamRounded-Medium';">
 	<table class="table table-bordered" >
 	  <thead>
 	    <tr>
@@ -112,8 +113,8 @@
 	  </tbody>
 	</table>
 
-	<a href="upload.php" style="margin-top: 40px;" class="btn btn-primary">Unggah File Surat</a>
-	<a href="carinomor.php" style="margin-top: 40px;" class="btn btn-danger">Kembali</a>
+	<a href="upload.php" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
+	<a href="carinomor.php" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
 </div>
 	
 

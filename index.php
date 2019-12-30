@@ -49,8 +49,9 @@
 <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
+        	<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-                <h3>Menu</h3>
+                <h3></h3>
             </div>
 
             <ul style="margin-left: 10px;" class="list-unstyled">
@@ -90,12 +91,7 @@
                    
                 </div>
             </nav>
-
-
-
-	<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
-
-	<form style="margin: 0 auto; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
+	<form style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
 	  <div class="form-group">
 	    <label>Nama Anda</label>
 	    <input type="text" class="form-control" placeholder="Masukkan nama anda">
