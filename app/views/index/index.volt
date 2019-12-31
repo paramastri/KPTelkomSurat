@@ -124,7 +124,7 @@
                 </div>
 
 
-                <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="nomor.php">Generate Nomor Surat</a>
+                <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="{{ url('nomor') }}">Generate Nomor Surat</a>
             </form>
 
 </body>

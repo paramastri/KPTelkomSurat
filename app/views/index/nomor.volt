@@ -79,13 +79,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
                 
                 <li>
-                    <a href="index.php">Generate Nomor Surat</a>
+                    <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="carinomor.php">Upload Surat</a>
+                    <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="#">Admin</a>
+                    <a href="{{ url('loginadmin') }}">Admin</a>
                 </li>
             </ul>
 
@@ -128,7 +128,7 @@
 
         </div>
 
-	  <a style="margin-top: 30px; float: none;" class="btn btn-danger" href="index.php">Kembali</a>
+	  <a style="margin-top: 30px; float: none;" class="btn btn-danger" href="{{ url('') }}">Kembali</a>
 	</div>
 	
 

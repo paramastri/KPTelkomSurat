@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>Generate Nomor Surat</title>
+
+
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="icon" href="favicon.png" type="png" sizes="16x16">
 
@@ -37,6 +40,25 @@
                 $(this).toggleClass('active');
             });
         });
+         function copyToClipboard(element) {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($(element).text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+          alert("Nomor surat berhasil disalin!");
+        }
+
+         $('#modal').on('click', function(){
+            $("#div_dbReadMany").modal('show');
+        });
+
+        $('.save').on('click', function(){
+           $('#div_dbReadMany').delay(1000).fadeOut('slow');
+           setTimeout(function() {
+               $("#div_dbReadMany").modal('hide');
+           }, 1500);
+        });
   	</script>
 
 </head>
@@ -51,19 +73,19 @@
         <nav id="sidebar">
         		<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-               <h3></h3>
+                <h3></h3>
             </div>
 
             <ul style="margin-left: 10px;" class="list-unstyled">
                 
                 <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
+                    <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('loginadmin') }}">Admin</a>
+                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
                 </li>
             </ul>
 
@@ -82,7 +104,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Unggah Surat</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Cari Surat</h2>
                    <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -94,22 +116,20 @@
 
 
 
-
-	<form action="" style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
+	<div style="margin-left: 90px; margin-top: 100px; width: 100%; font-family:'GothamRounded-Medium';">
 	  <div class="form-group">
-	    <label>Nama Anda</label>
-	    <input type="text" class="form-control" placeholder="Masukkan nama anda">
-	  </div>
+	    <label style="font-size: 15pt;">Nomor Surat Anda</label>
+	    <h2  id="nomor" style="font-weight: bold;">TEL.1/YN000/R5W-5M470000/2020</h2>
+        <button type="button" class="btn btn-warning" onclick="copyToClipboard('#nomor')">Salin</button>
 
-	  <div style="margin-top: 15px;">
-	  	<label>Unggah Surat</label>
-	  </div>
 
-    		<input style="font-size: 10pt;" type="file">			
+ 
 
-	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
-	  <a href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
-	</form>
+
+        </div>
+
+	  <a style="margin-top: 30px; float: none;" class="btn btn-danger" href="<?= $this->url->get('') ?>">Kembali</a>
+	</div>
 	
 
 </body>

@@ -57,13 +57,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
                 
                 <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
+                    <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('loginadmin') }}">Admin</a>
+                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
                 </li>
             </ul>
 
@@ -108,7 +108,7 @@
     		<input style="font-size: 10pt;" type="file">			
 
 	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
-	  <a href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
+	  <a href="<?= $this->url->get('detailnomor') ?>" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
 	</form>
 	
 

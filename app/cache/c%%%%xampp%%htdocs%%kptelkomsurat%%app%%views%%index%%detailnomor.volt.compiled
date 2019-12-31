@@ -45,25 +45,24 @@
 
 <body>
 
-
 <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
         		<img style="height: 100px; margin-top: 30px;" src="logo.png" class="rounded mx-auto d-block">
             <div class="sidebar-header">
-               <h3></h3>
+                <h3></h3>
             </div>
 
             <ul style="margin-left: 10px;" class="list-unstyled">
                 
                 <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
+                    <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('loginadmin') }}">Admin</a>
+                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
                 </li>
             </ul>
 
@@ -82,7 +81,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Unggah Surat</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Cek Surat Anda</h2>
                    <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -95,21 +94,28 @@
 
 
 
-	<form action="" style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
-	  <div class="form-group">
-	    <label>Nama Anda</label>
-	    <input type="text" class="form-control" placeholder="Masukkan nama anda">
-	  </div>
+	<div  style="margin-left: 90px; margin-top: 100px; width: 80%; font-family:'GothamRounded-Medium';">
+	<table class="table table-bordered" >
+	  <thead>
+	    <tr>
+	      <th scope="col">Nomor Surat</th>
+	      <th scope="col">Nama Surat</th>
+	      <th scope="col">Jenis Surat</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>TEL.1/YN000/R5W-5M470000/2020</td>
+	      <td>Surat Apa Hayo</td>
+	      <td>BASO</td>
+	    </tr>
 
-	  <div style="margin-top: 15px;">
-	  	<label>Unggah Surat</label>
-	  </div>
+	  </tbody>
+	</table>
 
-    		<input style="font-size: 10pt;" type="file">			
-
-	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
-	  <a href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
-	</form>
+	<a href="<?= $this->url->get('upload') ?>" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
+	<a href="<?= $this->url->get('carinomor') ?>" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
+</div>
 	
 
 </body>

@@ -58,13 +58,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="index.php">Generate Nomor Surat</a>
+                    <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="carinomor.php">Upload Surat</a>
+                    <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="#">Admin</a>
+                    <a href="{{ url('loginadmin') }}">Admin</a>
                 </li>
             </ul>
 
@@ -83,7 +83,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Cari Surat</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Error</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -94,11 +94,20 @@
             </nav>
 
             <div>
-                <h1 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium';">404</h1>
-                <h6 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium';">Maaf halaman yang anda cari tidak ditemukan.</h6>
+                <h1 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium'; font-size: 100pt;">404</h1>
+                <h4 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium';">Maaf halaman yang anda cari tidak ditemukan.</h4>
+                
             </div>
 
-            <a style="margin-top: 30px; float: none;" class="btn btn-danger" href="index.php">Kembali</a>
+
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <a style="margin-top: 30px;" href="{{ url('') }}" class="btn btn-danger">Kembali</a>
+                </div>
+              </div>
+            </div>
+            
             </form>
 
 

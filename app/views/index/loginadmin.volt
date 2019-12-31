@@ -58,13 +58,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="index.php">Generate Nomor Surat</a>
+                    <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="carinomor.php">Upload Surat</a>
+                    <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="#">Admin</a>
+                    <a href="{{ url('loginadmin') }}">Admin</a>
                 </li>
             </ul>
 
@@ -95,7 +95,7 @@
 
 
 
-            <form style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
                     <input type="text" class="form-control" placeholder="Masukkan username">

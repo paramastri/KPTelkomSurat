@@ -56,13 +56,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
                 
                 <li>
-                    <a href="index.php">Generate Nomor Surat</a>
+                    <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="carinomor.php">Upload Surat</a>
+                    <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="#">Admin</a>
+                    <a href="{{ url('loginadmin') }}">Admin</a>
                 </li>
             </ul>
 
@@ -113,8 +113,8 @@
 	  </tbody>
 	</table>
 
-	<a href="upload.php" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
-	<a href="carinomor.php" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
+	<a href="{{ url('upload') }}" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
+	<a href="{{ url('carinomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
 </div>
 	
 
