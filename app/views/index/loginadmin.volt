@@ -58,13 +58,13 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="{{ url('') }}">Generate Nomor Surat</a>
+                    <a href="index.php">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="carinomor.php">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('loginadmin') }}">Admin</a>
+                    <a href="#">Admin</a>
                 </li>
             </ul>
 
@@ -83,7 +83,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Generate Nomor Surat</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Masuk sebagai Admin</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -92,40 +92,24 @@
 
                 </div>
             </nav>
-            <form style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
+
+
+
+            <form style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
-                    <label>Nama Anda</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama anda">
+                    <label>Username</label>
+                    <input type="text" class="form-control" placeholder="Masukkan username">
                 </div>
 
                 <div class="form-group">
-                    <label>Nama Surat</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama surat">
-                </div>
-
-                <div>
-                    <label>Jenis Surat</label>
-                </div>
-
-                <div class="dropdown">
-
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Pilih Jenis Surat
-		</a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Berita Acara Penjelasan</a>
-                        <a class="dropdown-item" href="#">Berita Acara Siap Operasi (BASO)</a>
-                        <a class="dropdown-item" href="#">Berita Acara Delete Order (BADO)</a>
-                        <a class="dropdown-item" href="#">Surat Keluar</a>
-                        <a class="dropdown-item" href="#">P0/P1</a>
-                        <a class="dropdown-item" href="#">Surat Penawaran</a>
-                    </div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Masukkan password">
                 </div>
 
 
-                <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="nomor.php">Generate Nomor Surat</a>
+                <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
             </form>
+
 
 </body>
 

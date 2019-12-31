@@ -82,7 +82,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Masuk sebagai Admin</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Cari Surat</h2>
                    <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -94,19 +94,14 @@
 
 
 
-	<form style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+	<form action="detailnomor.php" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
 	  <div class="form-group">
-	    <label>Username</label>
+	    <label>Nomor Surat</label>
 	    <input type="text" class="form-control" placeholder="Masukkan nomor surat">
 	  </div>
 
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" placeholder="Masukkan nomor surat">
-      </div>
 
-
-	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
+	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Cari</button>
 	</form>
 	
 

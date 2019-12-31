@@ -16,6 +16,41 @@ $di->set(
                 'action' => 'index'
             ]
         );
+        $router->addGet(
+            '/carinomor',
+            [
+                'controller' => 'index',
+                'action' => 'carinomor'
+            ]
+        );
+        $router->addGet(
+            '/detailnomor',
+            [
+                'controller' => 'index',
+                'action' => 'detailnomor'
+            ]
+        );
+        $router->addGet(
+            '/loginadmin',
+            [
+                'controller' => 'index',
+                'action' => 'loginadmin'
+            ]
+        );
+        $router->addGet(
+            '/nomor',
+            [
+                'controller' => 'index',
+                'action' => 'nomor'
+            ]
+        );
+        $router->addGet(
+            '/upload',
+            [
+                'controller' => 'index',
+                'action' => 'upload'
+            ]
+        );
 
         // $router->notFound([
         //     'controller' => 'index',
