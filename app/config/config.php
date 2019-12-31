@@ -9,9 +9,9 @@ return new Config([
         'host' => '127.0.0.1',
         'username' => 'root',
         'password' => '',
-        'dbname' => 'cliniheal'
+        'dbname' => 'kptelkomsurat'
     ],
     'url' => [
-        'baseUrl' => 'http://localhost/cliniheal/'
+        'baseUrl' => 'http://localhost/kptelkomsurat/'
     ]
 ]);
