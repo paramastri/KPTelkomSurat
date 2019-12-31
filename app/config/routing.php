@@ -17,10 +17,10 @@ $di->set(
             ]
         );
 
-        $router->notFound([
-            'controller' => 'index',
-            'action' => 'show404'
-        ]);
+        // $router->notFound([
+        //     'controller' => 'index',
+        //     'action' => 'show404'
+        // ]);
 
         return $router;
     }
