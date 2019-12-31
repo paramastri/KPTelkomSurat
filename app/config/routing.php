@@ -52,6 +52,14 @@ $di->set(
             ]
         );
 
+        $router->addPost(
+            '/storesurat',
+            [
+                'controller' => 'index',
+                'action' => 'storesurat'
+            ]
+        );
+
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'

@@ -33,6 +33,16 @@ class IndexController extends Controller
     {
         
     }
+    public function storesuratAction()
+    {
+        $surat = new nomor_surat();
+        $surat->name = $this->request->getPost('nama');
+        $surat->nama_surat = $this->request->getPost('namasurat');
+        $surat->jenis_surat = $this->request->getPost('jenissurat');
+        $surat->tanggal = $this->request->getPost('tanggal');
+        $surat->save();
+        $this->response->redirect('nomor');
+    }
 
     
 
