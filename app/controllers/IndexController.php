@@ -47,6 +47,10 @@ class IndexController extends Controller
     {
         
     }
+    public function nomorterpakaiAction()
+    {
+        
+    }
     public function show404Action()
     {
         

@@ -55,7 +55,7 @@
                 <h3></h3>
             </div>
 
-            <ul style="margin-left: 10px;" class="list-unstyled">
+           <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
                     <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
@@ -64,7 +64,15 @@
                     <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="<?= $this->url->get('register') ?>">Register</a>
+                        </li>
+                        <li>
+                            <a href="<?= $this->url->get('loginadmin') ?>">Login</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 
@@ -94,7 +102,7 @@
             </nav>
 
             <div>
-                <h1 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium'; font-size: 100pt;">404</h1>
+                <h1 style="margin-top: 15%;text-align: center; font-weight: bold; font-family:'GothamRounded-Medium'; font-size: 100pt;">404</h1>
                 <h4 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium';">Maaf halaman yang anda cari tidak ditemukan.</h4>
                 
             </div>

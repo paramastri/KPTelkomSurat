@@ -68,6 +68,14 @@ $di->set(
             ]
         );
 
+        $router->addGet(
+            '/nomorterpakai',
+            [
+                'controller' => 'index',
+                'action' => 'nomorterpakai'
+            ]
+        );
+
         $router->addPost(
             '/storesurat',
             [
