@@ -108,14 +108,21 @@
 
 	<div class="home-content">
         <h2 class="dashboard-title">Daftar Pasien</h2>
-        <div id="daftar-pasien"></div>
+        <div id="example-table"></div>
     </div>
 
     <script>
-        var table = new Tabulator("#daftar-pasien", {
+
+
+            
+
+
+    // tabelnya
+        var table = new Tabulator("#example-table", {
             height: "311px",
             layout: "fitColumns",
-            paginationSize:25,
+            pagination:"local",
+            paginationSize:1,
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [
@@ -125,7 +132,7 @@
                 {title: "Nama Surat", field: "nama_surat"},
                 {title: "Jenis Surat", field: "jenis_surat"},
                 {
-                    title: "Upload Surat", field: "button", formatter: "button", formatterParams: {
+                    title: "Upload Surat", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Upload Surat",
                         urlPrefix: "{{ url('upload') }}",
@@ -134,10 +141,8 @@
                 },
             ],
         });
-        table.setData("{{ url('') }}");
+        table.setData("{{ url('listsurat') }}");
     </script>
-
-	<a href="{{ url('upload') }}" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
 	<a href="{{ url('carinomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
 </div>
 	
