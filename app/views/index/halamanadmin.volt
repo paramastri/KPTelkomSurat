@@ -91,37 +91,47 @@
                         <span></span>
                         <span></span>
                     </button>
+                    <button style="margin-left: 50px; float: right;" type="submit" class="btn btn-primary">Keluar</button>
                     <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang Admin</h2>
+
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
 
 
 
+
                 </div>
             </nav>
 
-            <table style="width:100%">
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Age</th>
-                </tr>
-                <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>80</td>
-                </tr>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
             </table>
 
 
