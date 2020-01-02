@@ -115,32 +115,27 @@
         var table = new Tabulator("#daftar-pasien", {
             height: "311px",
             layout: "fitColumns",
-            placeholder: "Tidak Ada Pasien",
+            paginationSize:25,
+            layout:"fitColumns",
+            placeholder: "Tidak Ada Data",
             columns: [
                 {title: "No", field: "no", formatter: "rownum", width: 10},
-                {title: "No Rekam Medis", field: "id"},
-                {title: "Nama Pasien", field: "nama"},
-                {title: "Jenis Kelamin", field: "jkel"},
+                {title: "No Surat", field: "no_surat"},
+                {title: "Nama", field: "nama"},
+                {title: "Nama Surat", field: "nama_surat"},
+                {title: "Jenis Surat", field: "jenis_surat"},
                 {
-                    title: "Lihat", field: "link", formatter: "link", formatterParams: {
+                    title: "Upload Surat", field: "button", formatter: "button", formatterParams: {
                         labelField: "name",
-                        label: "Lihat",
-                        urlPrefix: "{{ url('dokter/detailpasien/') }}",
-                        target: "_blank",
-                    }
-                },
-                {
-                    title: "Hapus", field: "link", formatter: "link", formatterParams: {
-                        labelField: "name",
-                        label: "Hapus",
-                        urlPrefix: "{{ url('dokter/hapuspasien/') }}",
+                        label: "Upload Surat",
+                        urlPrefix: "{{ url('upload') }}",
                         // target: "_blank",
                     }
-                }
+                },
             ],
         });
-        table.setData("{{ url('dokter/lihatpasiendata') }}");
-    </script>p
+        table.setData("{{ url('') }}");
+    </script>
 
 	<a href="{{ url('upload') }}" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
 	<a href="{{ url('carinomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
