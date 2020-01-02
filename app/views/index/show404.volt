@@ -55,7 +55,7 @@
                 <h3></h3>
             </div>
 
-            <ul style="margin-left: 10px;" class="list-unstyled">
+           <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
                     <a href="{{ url('') }}">Generate Nomor Surat</a>
@@ -64,7 +64,15 @@
                     <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('loginadmin') }}">Admin</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{{ url('register') }}">Register</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('loginadmin') }}">Login</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 

@@ -55,7 +55,7 @@
             </div>
 
             <ul style="margin-left: 10px;" class="list-unstyled">
-                
+
                 <li>
                     <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
                 </li>
@@ -63,7 +63,15 @@
                     <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="<?= $this->url->get('register') ?>">Register</a>
+                        </li>
+                        <li>
+                            <a href="<?= $this->url->get('loginadmin') ?>">Login</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 

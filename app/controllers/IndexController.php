@@ -33,6 +33,10 @@ class IndexController extends Controller
     {
         
     }
+    public function registerAction()
+    {
+        
+    }
     public function show404Action()
     {
         

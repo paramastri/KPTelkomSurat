@@ -3,9 +3,6 @@
 
 <head>
     <title>Generate Nomor Surat</title>
-
-
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="icon" href="favicon.png" type="png" sizes="16x16">
 
@@ -40,26 +37,6 @@
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
-        });
-
-        function copyToClipboard(element) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($(element).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-            alert("Nomor surat berhasil disalin!");
-        }
-
-        $('#modal').on('click', function() {
-            $("#div_dbReadMany").modal('show');
-        });
-
-        $('.save').on('click', function() {
-            $('#div_dbReadMany').delay(1000).fadeOut('slow');
-            setTimeout(function() {
-                $("#div_dbReadMany").modal('hide');
-            }, 1500);
         });
     </script>
 
@@ -114,7 +91,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Cari Surat</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Register Admin</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -126,20 +103,20 @@
 
 
 
-            <div style="margin-left: 90px; margin-top: 100px; width: 100%; font-family:'GothamRounded-Medium';">
+            <form action="" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
-                    <label style="font-size: 15pt;">Nomor Surat Anda</label>
-                    <h2 id="nomor" style="font-weight: bold;">TEL.1/YN000/R5W-5M470000/2020</h2>
-                    <button type="button" class="btn btn-warning" onclick="copyToClipboard('#nomor')">Salin</button>
-
-
-
-
-
+                    <label>Username</label>
+                    <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
                 </div>
 
-                <a style="margin-top: 30px; float: none;" class="btn btn-danger" href="{{ url('') }}">Kembali</a>
-            </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
+                </div>
+
+
+                <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Daftar</button>
+            </form>
 
 
 </body>

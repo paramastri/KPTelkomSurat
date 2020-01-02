@@ -59,6 +59,15 @@ $di->set(
             ]
         );
 
+
+        $router->addGet(
+            '/register',
+            [
+                'controller' => 'index',
+                'action' => 'register'
+            ]
+        );
+
         $router->addPost(
             '/storesurat',
             [
