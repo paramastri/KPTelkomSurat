@@ -37,6 +37,23 @@ $di->set(
                 'action' => 'loginadmin'
             ]
         );
+
+        $router->addGet(
+            '/register',
+            [
+                'controller' => 'index',
+                'action' => 'create'
+            ]
+        );
+
+        $router->addPost(
+            '/register',
+            [
+                'controller' => 'index',
+                'action' => 'store'
+            ]
+        );
+
         $router->addGet(
             '/nomor',
             [
@@ -60,12 +77,21 @@ $di->set(
         );
 
 
-        $router->addGet(
-            '/register',
+        // $router->addGet(
+        //     '/register',
+        //     [
+        //         'controller' => 'index',
+        //         'action' => 'register'
+        //     ]
+        // );
+
+        $router->addPost(
+            '/storelogin',
             [
-                'controller' => 'index',
-                'action' => 'register'
+                'controller'=>'index',
+                'action'=>'storelogin'
             ]
+
         );
 
         $router->addGet(

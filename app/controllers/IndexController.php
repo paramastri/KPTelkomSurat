@@ -2,6 +2,9 @@
 
 use Phalcon\Mvc\Controller;
 use Phalcon\Http\Response;
+use Phalcon\Mvc\Dispatcher;
+
+use App\Events\UserProtectController;
 
 class IndexController extends Controller
 {
@@ -17,9 +20,60 @@ class IndexController extends Controller
     {
         
     }
+
+    public function createAction()
+    {
+        
+    }
+
     public function loginadminAction()
     {
         
+    }
+
+    public function storeAction(){
+        $admin = new admin();
+        $admin->username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        // echo $password;
+        // die();
+        $admin->password = $this->security->hash($password);
+        $admin->save();
+        // echo $admin->password;
+        // die();
+        // echo $admin->username;
+        // echo $admin->password;
+        // die();
+        $this->response->redirect('loginadmin');
+    }
+
+    public function storeloginAction()
+    {
+        $username = $this->request->getPost('username');
+        $pass = $this->request->getPost('password');
+        // echo $pass;
+        // die();
+        $user = admin::findFirst("username = '$username'");
+        // echo $user->password;
+        // die();
+        if ($user){
+            if($this->security->checkHash($pass, $user->password)){
+                $this->session->set(
+                    'admin',
+                    [
+                        'id' => $user->id,
+                        'username' => $user->username,
+                    ]
+                );
+                
+                (new Response())->redirect('halamanadmin')->send();
+            }
+            else{
+                $this->response->redirect('loginadmin');
+                echo "gagal";
+                die();
+            }
+        }
     }
     public function nomorAction()
     {
@@ -43,14 +97,18 @@ class IndexController extends Controller
     {
         
     }
-    public function registerAction()
-    {
+    // public function registerAction()
+    // {
         
-    }
+
+    //}
     public function nomorterpakaiAction()
     {
         
     }
+
+    // }
+
     public function show404Action()
     {
         

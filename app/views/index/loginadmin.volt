@@ -103,19 +103,22 @@
 
 
 
-            <form action="" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
+
                     <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
+
                     <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
+
                 </div>
 
 
-                <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
+                <button value = "masuk" style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
             </form>
 
 

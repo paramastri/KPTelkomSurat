@@ -58,19 +58,19 @@
             <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
-                    <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
+                    <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
+                    <a href="{{ url('carinomor') }}">Upload Surat</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="<?= $this->url->get('register') ?>">Register</a>
+                            <a href="{{ url('register') }}">Register</a>
                         </li>
                         <li>
-                            <a href="<?= $this->url->get('loginadmin') ?>">Login</a>
+                            <a href="{{ url('loginadmin') }}">Login</a>
                         </li>
                     </ul>
                 </li>
@@ -91,7 +91,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Masuk sebagai Admin</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Register Admin</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -103,22 +103,19 @@
 
 
 
-            <form action="<?= $this->url->get('storelogin') ?>" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="{{ url("register") }}" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
-
                     <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
-
                     <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
-
                 </div>
 
 
-                <button value = "masuk" style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
+                <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Daftar</button>
             </form>
 
 

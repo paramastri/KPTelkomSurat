@@ -4,5 +4,5 @@ class admin extends Model
 {
     public $id;
     public $username;
-    public $pass;
+    public $password;
 }
