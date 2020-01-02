@@ -51,6 +51,13 @@ $di->set(
                 'action' => 'upload'
             ]
         );
+        $router->addGet(
+            '/halamanadmin',
+            [
+                'controller' => 'index',
+                'action' => 'halamanadmin'
+            ]
+        );
 
         $router->addPost(
             '/storesurat',
@@ -64,7 +71,7 @@ $di->set(
             'controller' => 'index',
             'action' => 'show404'
         ]);
-
+        
         return $router;
     }
 );

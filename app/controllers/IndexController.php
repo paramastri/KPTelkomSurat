@@ -29,6 +29,10 @@ class IndexController extends Controller
     {
         
     }
+    public function halamanadminAction()
+    {
+        
+    }
     public function show404Action()
     {
         
@@ -43,7 +47,7 @@ class IndexController extends Controller
         $surat->save();
         $this->response->redirect('nomor');
     }
-
+   
     
 
 
