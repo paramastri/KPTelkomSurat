@@ -114,6 +114,7 @@
                 <div id="daftar-pasien"></div>
             </div>
 
+<<<<<<< Updated upstream
             <script>
                 var table = new Tabulator("#daftar-pasien", {
                     height: "311px",
@@ -160,6 +161,39 @@
                 });
                 table.setData("<?= $this->url->get('dokter/lihatpasiendata') ?>");
             </script>
+=======
+    <script>
+        var table = new Tabulator("#daftar-pasien", {
+            height: "311px",
+            layout: "fitColumns",
+            placeholder: "Tidak Ada Pasien",
+            columns: [
+                {title: "No", field: "no", formatter: "rownum", width: 10},
+                {title: "Tanggal", field: "tanggal"},
+                {title: "No Surat", field: "no_surat"},
+                {title: "Nama Surat", field: "nama_surat"},
+                {title: "Jenis Surat", field: "jenis_surat"},
+                {
+                    title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Lihat Detail",
+                        urlPrefix: "<?= $this->url->get('dokter/detailpasien/') ?>",
+                        target: "_blank",
+                    }
+                },
+                {
+                    title: "Status", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Status",
+                        urlPrefix: "<?= $this->url->get('dokter/hapuspasien/') ?>",
+                        // target: "_blank",
+                    }
+                }
+            ],
+        });
+        table.setData("<?= $this->url->get('dokter/lihatpasiendata') ?>");
+    </script>
+>>>>>>> Stashed changes
 
 
 
