@@ -109,6 +109,14 @@ $di->set(
                 'action' => 'logout'
             ]
         );
+
+        $router->addGet(
+            '/listsurat',
+            [
+                'controller' => 'index',
+                'action' => 'listsurat'
+            ]
+        );
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'
