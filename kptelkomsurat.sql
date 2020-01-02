@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Des 2019 pada 04.11
+-- Waktu pembuatan: 02 Jan 2020 pada 08.23
 -- Versi server: 10.1.36-MariaDB
 -- Versi PHP: 7.2.11
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `crud_db`
+-- Database: `kptelkomsurat`
 --
 
 -- --------------------------------------------------------
@@ -31,8 +31,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(50) DEFAULT NULL,
-  `pass` varchar(50) DEFAULT NULL
+  `password` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(18, 'lutfi', '$2y$12$VVJxTVd6L2lLU3pXSy9RVOpmgLHz.7md.M9V05mNLDBSvzckb8c3S'),
+(19, 'kp', '$2y$12$bFdFNHB0UW5FM1NHTE10e.UiyTtR21sp7ICrQWOIT6Y.StRILPW5W'),
+(20, 'mami', '$2y$12$ZElyNzBsa1ZFQUZKOXZGQuOYmvf31m3dL01Dcbep.HQsFmaD0GqKi');
 
 -- --------------------------------------------------------
 
@@ -87,7 +96,7 @@ ALTER TABLE `nomor_surat`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `nomor_surat`
