@@ -94,14 +94,6 @@ $di->set(
 
         );
 
-        $router->addGet(
-            '/nomorterpakai',
-            [
-                'controller' => 'index',
-                'action' => 'nomorterpakai'
-            ]
-        );
-
         $router->addPost(
             '/storesurat',
             [
@@ -110,6 +102,13 @@ $di->set(
             ]
         );
 
+        $router->addGet(
+            '/logout',
+            [
+                'controller' => 'index',
+                'action' => 'logout'
+            ]
+        );
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'

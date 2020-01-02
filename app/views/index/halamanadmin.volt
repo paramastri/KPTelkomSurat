@@ -93,7 +93,10 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <button style="margin-left: 50px; float: right;" type="submit" class="btn btn-primary">Keluar</button>
+                    <a style="margin-left: 50px; float: right;" type="submit" href="{{ url("logout") }}" class="btn btn-primary">Keluar</a>
+<!--                         <a href="{{ url('logout') }}">
+                            Logout
+                        </a> -->
                     <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang Admin</h2>
 
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

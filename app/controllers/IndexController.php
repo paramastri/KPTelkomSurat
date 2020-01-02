@@ -65,7 +65,7 @@ class IndexController extends Controller
                         'username' => $user->username,
                     ]
                 );
-                
+
                 (new Response())->redirect('halamanadmin')->send();
             }
             else{
@@ -192,8 +192,11 @@ class IndexController extends Controller
         $this->response->redirect('nomor');
     }
    
-    
-
+    public function logoutAction()
+    {
+        $this->session->destroy();
+        $this->response->redirect();
+    }
 
 
 }
