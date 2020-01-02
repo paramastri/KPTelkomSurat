@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="style5.css">
 
 
+
+    <!-- tabulator -->
+    <link href="{{ url("tabulator.min.css") }}" rel="stylesheet">
+    <script src="{{ url("tabulator.min.js") }}"></script>
+
 	 <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
@@ -101,24 +106,41 @@
 
 
 
-	<div  style="margin-left: 90px; margin-top: 100px; width: 80%; font-family:'GothamRounded-Medium';">
-	<table class="table table-bordered" >
-	  <thead>
-	    <tr>
-	      <th scope="col">Nomor Surat</th>
-	      <th scope="col">Nama Surat</th>
-	      <th scope="col">Jenis Surat</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>TEL.1/YN000/R5W-5M470000/2020</td>
-	      <td>Surat Apa Hayo</td>
-	      <td>BASO</td>
-	    </tr>
+	<div class="home-content">
+        <h2 class="dashboard-title">Daftar Pasien</h2>
+        <div id="daftar-pasien"></div>
+    </div>
 
-	  </tbody>
-	</table>
+    <script>
+        var table = new Tabulator("#daftar-pasien", {
+            height: "311px",
+            layout: "fitColumns",
+            placeholder: "Tidak Ada Pasien",
+            columns: [
+                {title: "No", field: "no", formatter: "rownum", width: 10},
+                {title: "No Rekam Medis", field: "id"},
+                {title: "Nama Pasien", field: "nama"},
+                {title: "Jenis Kelamin", field: "jkel"},
+                {
+                    title: "Lihat", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Lihat",
+                        urlPrefix: "{{ url('dokter/detailpasien/') }}",
+                        target: "_blank",
+                    }
+                },
+                {
+                    title: "Hapus", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Hapus",
+                        urlPrefix: "{{ url('dokter/hapuspasien/') }}",
+                        // target: "_blank",
+                    }
+                }
+            ],
+        });
+        table.setData("{{ url('dokter/lihatpasiendata') }}");
+    </script>p
 
 	<a href="{{ url('upload') }}" style="margin-top: 50px;" class="btn btn-primary">Unggah File Surat</a>
 	<a href="{{ url('carinomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
