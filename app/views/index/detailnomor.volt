@@ -107,7 +107,7 @@
 
 
 	<div class="home-content">
-        <h2 class="dashboard-title">Daftar Pasien</h2>
+        <h2 class="dashboard-title"></h2>
         <div id="example-table"></div>
     </div>
 
