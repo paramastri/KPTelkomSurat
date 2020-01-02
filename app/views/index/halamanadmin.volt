@@ -22,6 +22,8 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
+    <link href="{{ url("tabulator.min.css") }}" rel="stylesheet">
+    <script src="{{ url("tabulator.min.js") }}"></script>
     <script>
         $(function() {
 
@@ -104,35 +106,41 @@
                 </div>
             </nav>
 
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+             <div class="home-content">
+        <h2 class="dashboard-title">Daftar Pasien</h2>
+        <div id="daftar-pasien"></div>
+    </div>
+
+    <script>
+        var table = new Tabulator("#daftar-pasien", {
+            height: "311px",
+            layout: "fitColumns",
+            placeholder: "Tidak Ada Pasien",
+            columns: [
+                {title: "No", field: "no", formatter: "rownum", width: 10},
+                {title: "No Rekam Medis", field: "id"},
+                {title: "Nama Pasien", field: "nama"},
+                {title: "Jenis Kelamin", field: "jkel"},
+                {
+                    title: "Lihat", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Lihat",
+                        urlPrefix: "{{ url('dokter/detailpasien/') }}",
+                        target: "_blank",
+                    }
+                },
+                {
+                    title: "Hapus", field: "link", formatter: "link", formatterParams: {
+                        labelField: "name",
+                        label: "Hapus",
+                        urlPrefix: "{{ url('dokter/hapuspasien/') }}",
+                        // target: "_blank",
+                    }
+                }
+            ],
+        });
+        table.setData("{{ url('dokter/lihatpasiendata') }}");
+    </script>
 
 
 
