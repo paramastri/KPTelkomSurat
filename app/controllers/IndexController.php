@@ -85,19 +85,24 @@ class IndexController extends Controller
                     'limit' => 1,
                 ]
             );
-            if(!$data)
+            if($data)
+            {
+                $tanggal1 = strtotime($tanggal);
+                $tanggal2 = strtotime($data->tanggal);
+                $diff = abs($tanggal1 - $tanggal2)/60/60/24; 
+                // $difftanggal = $diff-1;
+                // echo($diff);
+                // var_dump($data);
+                // die();
+            
+                $nomor=$data->nomor + (5*$diff);
+                
+            }
+            else
             {
                 $nomor=1;
             }
-            $tanggal1 = strtotime($tanggal);
-            $tanggal2 = strtotime($data->tanggal);
-            $diff = abs($tanggal1 - $tanggal2)/60/60/24; 
-            // $difftanggal = $diff-1;
-            // echo($diff);
-            // var_dump($data);
-            // die();
             
-            $nomor=$data->nomor + (5*$diff);
             
         }
         if($jenissurat == 5)

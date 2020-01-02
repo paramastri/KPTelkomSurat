@@ -87,7 +87,15 @@
                     <a href="<?= $this->url->get('carinomor') ?>">Upload Surat</a>
                 </li>
                 <li>
-                    <a href="<?= $this->url->get('loginadmin') ?>">Admin</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="<?= $this->url->get('register') ?>">Register</a>
+                        </li>
+                        <li>
+                            <a href="<?= $this->url->get('loginadmin') ?>">Login</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
 
@@ -118,11 +126,11 @@
 
 
 
-            <div style="margin-left: 90px; margin-top: 100px; width: 100%; font-family:'GothamRounded-Medium';">
-                <div class="form-group">
-                    <label style="font-size: 15pt;">Nomor Surat Anda</label>
-                    <h2 id="nomor" style="font-weight: bold;">TEL.1/YN000/R5W-5M470000/2020</h2>
-                    <button type="button" class="btn btn-warning" onclick="copyToClipboard('#nomor')">Salin</button>
+	<div style="margin-left: 90px; margin-top: 100px; width: 100%; font-family:'GothamRounded-Medium';">
+	  <div class="form-group">
+	    <label style="font-size: 15pt;">Nomor Surat Anda</label>
+	    <h2  id="nomor" style="font-weight: bold;"><?= $data->no_surat ?></h2>
+        <button type="button" class="btn btn-warning" onclick="copyToClipboard('#nomor')">Salin</button>
 
 
 
