@@ -92,15 +92,20 @@
 
                 </div>
             </nav>
-            <form style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="<?= $this->url->get('storesurat') ?>" method="post" style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Nama Anda</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama anda">
+                    <input type="text" class="form-control" placeholder="Masukkan nama anda" name="nama" required>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Surat</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama surat">
+                    <input type="text" class="form-control" placeholder="Masukkan nama surat" name="namasurat" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal Surat</label>
+                    <input type="date" class="form-control" name="tanggal" required>
                 </div>
 
                 <div>
@@ -108,7 +113,7 @@
                 </div>
 
 
-                <select name="jenissurat" class="form-control form-control-sm" style="width: 100%; font-size: 15pt;">
+                <select name="jenissurat" class="form-control form-control-sm" style="width: 100%; font-size: 15pt;" required>
                   <option value="0"></option>
                   <option value="1">Berita Acara Penjelasan</option>
                   <option value="2">Berita Acara Siap Operasi (BASO)</option>
@@ -117,8 +122,8 @@
                   <option value="5">P0/P1</option>
                   <option value="6">Surat Penawaran</option>
                 </select>
-
-                <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="<?= $this->url->get('nomor') ?>">Generate Nomor Surat</a>
+                <input style="margin-top: 30px;" type="submit" class="btn btn-primary" value="Generate Nomor Surat">
+                <!-- <a style="margin-top: 30px;" type="submit" class="btn btn-primary" href="<?= $this->url->get('nomor') ?>">Generate Nomor Surat</a> -->
             </form>
 
 </body>

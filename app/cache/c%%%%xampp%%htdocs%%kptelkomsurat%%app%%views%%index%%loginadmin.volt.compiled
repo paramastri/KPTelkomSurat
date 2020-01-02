@@ -98,12 +98,12 @@
             <form action="" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
-                    <input type="text" class="form-control" placeholder="Masukkan username">
+                    <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Masukkan password">
+                    <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
                 </div>
 
 
