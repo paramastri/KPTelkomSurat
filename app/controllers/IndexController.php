@@ -96,9 +96,9 @@ class IndexController extends Controller
     {
         
     }
-    public function lihatdetailAction()
+    public function lihatdetailAction($id)
     {
-        
+        $this->view->data = nomor_surat::findFirst("id='$id'");
     }
     // public function registerAction()
     // {
@@ -255,6 +255,62 @@ class IndexController extends Controller
                         'no_surat' => $surat->no_surat,
                         'tanggal' => $surat->tanggal,
                         'nama' => $surat->name,
+                        'nama_surat' => $surat->nama_surat,
+                        'jenis_surat' => $jenissurat,
+                        'status' => $status,
+                        'link' => $surat->id,
+                    );
+
+
+            }
+            
+            $content = json_encode($data);
+            return $this->response->setContent($content);
+    }
+
+    public function listsuratadminAction()
+    {
+        $surats = nomor_surat::find(['order' => 'nomor DESC']);
+            $data = array();
+
+            foreach ($surats as $surat) {
+
+                if($surat->jenis_surat == 1)
+                {
+                    $jenissurat = "Berita Acara Penjelasan";
+                }
+                elseif($surat->jenis_surat == 2)
+                {
+                    $jenissurat = "BASO";
+                }
+                elseif($surat->jenis_surat == 3)
+                {
+                    $jenissurat = "BADO";
+                }
+                elseif($surat->jenis_surat == 4)
+                {
+                    $jenissurat = "Surat Keluar";
+                }
+                elseif($surat->jenis_surat == 5)
+                {
+                    $jenissurat = "P0/P1";
+                }
+                elseif($surat->jenis_surat == 6)
+                {
+                    $jenissurat = "Surat Penawaran";
+                }
+
+                if($surat->file)
+                {
+                    $status = "Sudah";
+                }
+                else{
+                    $status = "Belum";
+                }
+                
+                    $data[] = array(
+                        'no_surat' => $surat->no_surat,
+                        'tanggal' => $surat->tanggal,
                         'nama_surat' => $surat->nama_surat,
                         'jenis_surat' => $jenissurat,
                         'status' => $status,

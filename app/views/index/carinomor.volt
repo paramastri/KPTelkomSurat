@@ -102,14 +102,11 @@
 
 
 
-	<form action="{{ url('detailnomor') }}" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
-	  <div class="form-group">
-	    <label>Nomor Surat</label>
-	    <input type="text" class="form-control" placeholder="Masukkan nomor surat">
-	  </div>
+	<form action="{{ url('detailnomor') }}" style="margin-left: 90px; margin-top: 0px; width: 30%; font-family:'GothamRounded-Medium';">
+	
 
 
-	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Cari</button>
+	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Lihat Daftar Surat Disini</button>
 	</form>
 	
 

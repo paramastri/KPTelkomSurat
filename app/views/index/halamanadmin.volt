@@ -134,25 +134,18 @@
                 {title: "No Surat", field: "no_surat"},
                 {title: "Nama Surat", field: "nama_surat"},
                 {title: "Jenis Surat", field: "jenis_surat"},
+                {title: "Status Upload", field: "status"},
                 {
                     title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Lihat Detail",
-                        urlPrefix: "{{ url('') }}",
-                        // target: "_blank",
-                    }
-                },
-                {
-                    title: "Status", field: "link", formatter: "link", formatterParams: {
-                        labelField: "name",
-                        label: "Status",
-                        urlPrefix: "{{ url('') }}",
+                        urlPrefix: "{{ url('lihatdetail/') }}",
                         // target: "_blank",
                     }
                 },
             ],
         });
-        table.setData("{{ url('listsurat') }}");
+        table.setData("{{ url('listsuratadmin') }}");
     </script>
     
 </div>
