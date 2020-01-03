@@ -48,9 +48,9 @@
     <h2 style="margin-top: 90px; margin-left: 90px;">Detail {{data.nama_surat}}</h2>
 
             <ul style="margin-top: 40px;  margin-left: 90px; margin-right: 50%;" class="list-group">
-                <li class="list-group-item list-group-item-danger">Nama: {{data.name}}</li>
-                <li class="list-group-item list-group-item-danger">Nama Surat: {{data.nama_surat}}</li>
-                <li class="list-group-item list-group-item-danger">Jenis Surat:
+                <li class="list-group-item list-group-item-primary">Nama: {{data.name}}</li>
+                <li class="list-group-item list-group-item-primary">Nama Surat: {{data.nama_surat}}</li>
+                <li class="list-group-item list-group-item-primary">Jenis Surat:
                 {% if (data.jenis_surat == 1) %}
                 Berita acara penjelasan
                 {% elseif (data.jenis_surat == 2) %}
@@ -66,12 +66,12 @@
                 {% endif %}
                 
                 </li>
-                <li class="list-group-item list-group-item-danger">No Surat: {{data.no_surat}}</li>
-                <li class="list-group-item list-group-item-danger">Tanggal: {{data.tanggal}}</li>
+                <li class="list-group-item list-group-item-primary">No Surat: {{data.no_surat}}</li>
+                <li class="list-group-item list-group-item-primary">Tanggal: {{data.tanggal}}</li>
 
                 {% if (data.file) %}
-                <li class="list-group-item list-group-item-danger">Nama Pengupload: {{data.nama_pengupload}}</li>
-                <li class="list-group-item list-group-item-danger"><img src="data:image/jpg/png;base64,{{data.file}}" height="140px;" /> </li>
+                <li class="list-group-item list-group-item-primary">Nama Pengupload: {{data.nama_pengupload}}</li>
+                <li class="list-group-item list-group-item-primary"><img src="data:image/jpg/png;base64,{{data.file}}" height="140px;" /> </li>
                 {% else %}
                 File belum diupload
                 {% endif %}
