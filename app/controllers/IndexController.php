@@ -229,6 +229,14 @@ class IndexController extends Controller
                 {
                     $jenissurat = "Surat Penawaran";
                 }
+
+                if($surat->file)
+                {
+                    $status = "Sudah";
+                }
+                else{
+                    $status = "Belum";
+                }
                 
                     $data[] = array(
                         'no_surat' => $surat->no_surat,
@@ -236,6 +244,7 @@ class IndexController extends Controller
                         'nama' => $surat->name,
                         'nama_surat' => $surat->nama_surat,
                         'jenis_surat' => $jenissurat,
+                        'status' => $status,
                         'link' => $surat->id,
                     );
 
