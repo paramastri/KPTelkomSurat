@@ -70,12 +70,13 @@ $di->set(
             ]
         );
         $router->addGet(
-            '/lihatdetail',
+            '/lihatdetail/{id}',
             [
                 'controller' => 'index',
                 'action' => 'lihatdetail'
             ]
         );
+
 
 
         // $router->addGet(

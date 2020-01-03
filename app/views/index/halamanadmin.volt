@@ -138,7 +138,7 @@
                     title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Lihat Detail",
-                        urlPrefix: "{{ url('') }}",
+                        urlPrefix: "{{ url('lihatdetail/') }}",
                         // target: "_blank",
                     }
                 },
