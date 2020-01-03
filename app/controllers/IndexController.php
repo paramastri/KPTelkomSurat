@@ -209,7 +209,7 @@ class IndexController extends Controller
     public function listsuratAction()
     {
         // $id = $this->session->get('auth')['id'];
-        $surats = nomor_surat::find();
+        $surats = nomor_surat::find(['order' => 'nomor DESC']);
             $data = array();
 
             foreach ($surats as $surat) {
