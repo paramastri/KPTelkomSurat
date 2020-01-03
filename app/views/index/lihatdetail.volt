@@ -70,8 +70,8 @@
                 <li class="list-group-item list-group-item-primary">Tanggal: {{data.tanggal}}</li>
 
                 {% if (data.file) %}
-                <li class="list-group-item list-group-item-primary">Nama Pengupload: {{data.nama_pengupload}}</li>
-                <li class="list-group-item list-group-item-primary"><img src="data:image/jpg/png;base64,{{data.file}}" height="140px;" /> </li>
+                <li class="list-group-item list-group-item-danger">Nama Pengupload: {{data.nama_pengupload}}</li>
+                <li class="list-group-item list-group-item-danger"><a  href="../download/{{data.id}}" class="btn btn-primary">Download File Surat</a> </li>
                 {% else %}
                 File belum diupload
                 {% endif %}

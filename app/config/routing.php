@@ -148,6 +148,14 @@ $di->set(
             ]
         );
 
+        $router->addGet(
+            '/download/{id}',
+            [
+                'controller' => 'index',
+                'action' => 'download'
+            ]
+        );
+
         $router->addPost(
             '/storeupload',
             [

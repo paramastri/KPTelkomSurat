@@ -344,25 +344,46 @@ class IndexController extends Controller
         $id = $this->request->getPost('id');
         $surat = nomor_surat::findFirst("id='$id'");
 
-            if ($this->request->hasFiles() == true) {
-                $file = file_get_contents($_FILES['file']['tmp_name']);
-                $efile = base64_encode($file);
+            if (true == $this->request->hasFiles() && $this->request->isPost()) {
+                $upload_dir = __DIR__ . '/../../public/uploads/';
+          
+                if (!is_dir($upload_dir)) {
+                  mkdir($upload_dir, 0755);
+                }
+                foreach ($this->request->getUploadedFiles() as $file) {
+                    $temp = explode(".", $_FILES["file"]["name"]);
+                  $file->moveTo($upload_dir . $file->getName());
+                    $lama = $upload_dir.$file->getName();
+                    $baru = $upload_dir. 'TEL' .$surat->nomor. '.' .end($temp);
+                    rename($lama, $baru);
+                
+                }
             }
 
         $surat->nama_pengupload = $this->request->getPost('pengupload');
-        $surat->file = $efile;
-        // $dokter->foto = $efile;
-        // $dokter->fotosize = $file_size;
-        // $dokter->fototype = $file_type;
-            $surat->save();
+        $surat->file = 'TEL' .$surat->nomor. '.' .end($temp);
+  
+        $surat->save();
 
-        //$file->moveTo($baseLocation . $file->getName());
-
-            $this->response->redirect('detailnomor');
+        $this->response->redirect('detailnomor');
 
     }
 
-
+    public function downloadAction($id)
+    { 
+        $surat = nomor_surat::findFirst("id='$id'");
+        $upload_dir = __DIR__ . '/../../public/uploads/';
+        $path = $upload_dir.$surat->file;
+        $filetype = filetype($path);
+        $filesize = filesize($path);
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header('Content-Description: File Download');
+        header('Content-type: '.$filetype);
+        header('Content-length: ' . $filesize);
+        header('Content-Disposition: attachment; filename="'.$surat->file.'"');
+        readfile($path);
+        // die();*/
+     }
 
 
 }
