@@ -51,7 +51,7 @@ class IndexController extends Controller
 
     public function create1Action()
     {
-        $_isAdmin = $this->session->get('auth');
+        $_isAdmin = $this->session->get('admin');
         if ($_isAdmin) {
             return $this->response->redirect('halamanadmin');
         } else {
