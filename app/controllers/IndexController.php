@@ -4,6 +4,9 @@ use Phalcon\Mvc\Controller;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\Dispatcher;
 use App\Events\AdminProtectController;
+use Phalcon\Escaper;
+use Phalcon\Flash\Direct;
+use App\Validation\FileValidation;
 
 
 // use App\Events\UserProtectController;
@@ -51,6 +54,8 @@ class IndexController extends Controller
 
     public function storeloginAction()
     {
+        $escaper = new Escaper();
+        $flash   = new Direct($escaper);
         $username = $this->request->getPost('username');
         $pass = $this->request->getPost('password');
         // echo $pass;
@@ -72,9 +77,13 @@ class IndexController extends Controller
             }
             else{
                 $this->response->redirect('loginadmin');
-                echo "gagal";
-                die();
+                $flash->error('password salah');
+
             }
+
+        }
+        else {
+            echo "Tidak ada username"; 
         }
     }
     public function nomorAction()
@@ -331,26 +340,42 @@ class IndexController extends Controller
     }
 
     public function storeuploadAction()
-    {
-        
-        $id = $this->request->getPost('id');
-        $surat = nomor_surat::findFirst("id='$id'");
+    {   
 
-            if ($this->request->hasFiles() == true) {
-                $file = file_get_contents($_FILES['file']['tmp_name']);
-                $efile = base64_encode($file);
+            $val = new FileValidation();
+            $messages = $val->validate($_FILES);
+
+            if (count($messages)) {
+                foreach ($messages as $m) {
+                    echo($m);
+                    // $this->messages[$m->getField()] = $m;
+                }
+
             }
+            else{
+                // $dokter->save();
+                // $this->response->redirect('user/login');
+                 $id = $this->request->getPost('id');
+                $surat = nomor_surat::findFirst("id='$id'");
 
-        $surat->nama_pengupload = $this->request->getPost('pengupload');
-        $surat->file = $efile;
-        // $dokter->foto = $efile;
-        // $dokter->fotosize = $file_size;
-        // $dokter->fototype = $file_type;
-            $surat->save();
+                    if ($this->request->hasFiles() == true) {
+                        $file = file_get_contents($_FILES['file']['tmp_name']);
+                        $efile = base64_encode($file);
+                    }
 
-        //$file->moveTo($baseLocation . $file->getName());
+                $surat->nama_pengupload = $this->request->getPost('pengupload');
+                $surat->file = $efile;
+                // $dokter->foto = $efile;
+                // $dokter->fotosize = $file_size;
+                // $dokter->fototype = $file_type;
+                    $surat->save();
 
-            $this->response->redirect('detailnomor');
+                //$file->moveTo($baseLocation . $file->getName());
+
+                    $this->response->redirect('detailnomor');
+            }
+        
+       
 
     }
 

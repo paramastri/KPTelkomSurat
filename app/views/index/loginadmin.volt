@@ -116,6 +116,7 @@
                     <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
 
                 </div>
+                {{ flash.output() }}
 
 
                 <button value = "masuk" style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
