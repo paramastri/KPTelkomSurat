@@ -73,16 +73,14 @@
 	  	<label>Unggah Surat</label>
 	  </div>
 
-    		<input style="font-size: 10pt;" type="file" name="file">			
+    		<input style="font-size: 10pt;" type="file" name="file">		
+    <div>	
 
 	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
-    
-        
-
-
-	  
-	  <a href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
+	  <button href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</button>
+    </div>
 	</form>
+
 	
 
 </body>
