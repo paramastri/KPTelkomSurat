@@ -50,10 +50,32 @@
             <ul style="margin-top: 40px;  margin-left: 90px; margin-right: 50%;" class="list-group">
                 <li class="list-group-item list-group-item-danger">Nama: {{data.name}}</li>
                 <li class="list-group-item list-group-item-danger">Nama Surat: {{data.nama_surat}}</li>
-                <li class="list-group-item list-group-item-danger">Jenis Surat: {{data.jenis_surat}}</li>
+                <li class="list-group-item list-group-item-danger">Jenis Surat:
+                {% if (data.jenis_surat == 1) %}
+                Berita acara penjelasan
+                {% elseif (data.jenis_surat == 2) %}
+                Berita acara siap operasi (BASO)
+                {% elseif (data.jenis_surat == 3) %}
+                Berita acara delete order (BADO)
+                {% elseif (data.jenis_surat == 4) %}
+                Surat keluar
+                {% elseif (data.jenis_surat == 5) %}
+                P0/P1
+                {% elseif (data.jenis_surat == 6) %}
+                Surat penawaran
+                {% endif %}
+                
+                </li>
                 <li class="list-group-item list-group-item-danger">No Surat: {{data.no_surat}}</li>
                 <li class="list-group-item list-group-item-danger">Tanggal: {{data.tanggal}}</li>
-                <li class="list-group-item list-group-item-danger"><a  href="#" class="btn btn-primary">Download File Surat</a> </li>
+
+                {% if (data.file) %}
+                <li class="list-group-item list-group-item-danger">Nama Pengupload: {{data.nama_pengupload}}</li>
+                <li class="list-group-item list-group-item-danger"><img src="data:image/jpg/png;base64,{{data.file}}" height="140px;" /> </li>
+                {% else %}
+                File belum diupload
+                {% endif %}
+                
             </ul>
 
           
