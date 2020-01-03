@@ -113,6 +113,14 @@ $di->set(
         );
 
         $router->addGet(
+            '/listsuratadmin',
+            [
+                'controller' => 'index',
+                'action' => 'listsuratadmin'
+            ]
+        );
+
+        $router->addGet(
             '/upload/{id}',
             [
                 'controller' => 'index',
