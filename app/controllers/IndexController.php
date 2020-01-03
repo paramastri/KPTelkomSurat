@@ -170,7 +170,13 @@ class IndexController extends Controller
             
             
         }
-        if($jenissurat == 5)
+        $cek = nomor_surat::findFirst("nomor='$nomor'");
+        if($cek)
+        {
+            $this->response->redirect('nomorterpakai');
+        }
+        else{
+            if($jenissurat == 5)
             {
                 $nomorsurat = "TEL.".($nomor)."/LG000/R5W-5M470000/2020";
             }
@@ -182,17 +188,20 @@ class IndexController extends Controller
             {
                 $nomorsurat = "TEL.".($nomor)."/YN000/R5W-5M470000/2020";
             }
-        echo($nomorsurat);
-        // die();
-        $surat = new nomor_surat();
-        $surat->name = $this->request->getPost('nama');
-        $surat->nama_surat = $this->request->getPost('namasurat');
-        $surat->jenis_surat = $jenissurat;
-        $surat->nomor = $nomor;
-        $surat->no_surat = $nomorsurat;
-        $surat->tanggal = $this->request->getPost('tanggal');
-        $surat->save();
-        $this->response->redirect('nomor');
+            echo($nomorsurat);
+            // die();
+            $surat = new nomor_surat();
+            $surat->name = $this->request->getPost('nama');
+            $surat->nama_surat = $this->request->getPost('namasurat');
+            $surat->jenis_surat = $jenissurat;
+            $surat->nomor = $nomor;
+            $surat->no_surat = $nomorsurat;
+            $surat->tanggal = $this->request->getPost('tanggal');
+            $surat->save();
+            $this->response->redirect('nomor');
+        }
+
+        
     }
    
     public function logoutAction()
@@ -204,7 +213,7 @@ class IndexController extends Controller
     public function listsuratAction()
     {
         // $id = $this->session->get('auth')['id'];
-        $surats = nomor_surat::find();
+        $surats = nomor_surat::find(['order' => 'nomor DESC']);
             $data = array();
 
             foreach ($surats as $surat) {
@@ -233,6 +242,14 @@ class IndexController extends Controller
                 {
                     $jenissurat = "Surat Penawaran";
                 }
+
+                if($surat->file)
+                {
+                    $status = "Sudah";
+                }
+                else{
+                    $status = "Belum";
+                }
                 
                     $data[] = array(
                         'no_surat' => $surat->no_surat,
@@ -240,6 +257,7 @@ class IndexController extends Controller
                         'nama' => $surat->name,
                         'nama_surat' => $surat->nama_surat,
                         'jenis_surat' => $jenissurat,
+                        'status' => $status,
                         'link' => $surat->id,
                     );
 
@@ -279,6 +297,8 @@ class IndexController extends Controller
             $this->response->redirect('detailnomor');
 
     }
+
+
 
 
 }
