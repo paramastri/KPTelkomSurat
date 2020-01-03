@@ -135,6 +135,14 @@ $di->set(
             ]
         );
 
+        $router->addGet(
+            '/nomorterpakai',
+            [
+                'controller' => 'index',
+                'action' => 'nomorterpakai'
+            ]
+        );
+
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'
