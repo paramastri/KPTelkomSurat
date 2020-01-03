@@ -122,11 +122,7 @@
             height: "311px",
             layout: "fitColumns",
             pagination:"local",
-<<<<<<< Updated upstream
-            paginationSize:10,
-=======
             paginationSize:8,
->>>>>>> Stashed changes
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [

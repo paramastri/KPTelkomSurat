@@ -96,11 +96,7 @@
 <!--                         <a href="<?= $this->url->get('logout') ?>">
                             Logout
                         </a> -->
-<<<<<<< Updated upstream
                     <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang, <?= $this->session->get('admin')['username'] ?>!</h2>
-=======
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang Bos, <?= $this->session->get('admin')['username'] ?>!</h2>
->>>>>>> Stashed changes
                    <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -129,11 +125,7 @@
             height: "311px",
             layout: "fitColumns",
             pagination:"local",
-<<<<<<< Updated upstream
             paginationSize:10,
-=======
-            paginationSize:1,
->>>>>>> Stashed changes
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [
@@ -146,7 +138,7 @@
                     title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
                         label: "Lihat Detail",
-                        urlPrefix: "<?= $this->url->get('') ?>",
+                        urlPrefix: "<?= $this->url->get('lihatdetail/') ?>",
                         // target: "_blank",
                     }
                 },
@@ -160,11 +152,7 @@
                 },
             ],
         });
-<<<<<<< Updated upstream
         table.setData("<?= $this->url->get('listsurat') ?>");
-=======
-        table.setData("<?= $this->url->get('') ?>");
->>>>>>> Stashed changes
     </script>
     
 </div>

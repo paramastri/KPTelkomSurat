@@ -96,6 +96,10 @@ class IndexController extends Controller
     {
         
     }
+    public function lihatdetailAction($id)
+    {
+        $this->view->data = nomor_surat::findFirst("id='$id'");
+    }
     // public function registerAction()
     // {
         
