@@ -103,19 +103,27 @@
 
 
 
-	<form action="" style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
+	<form action="{{ url("storeupload") }}" method = "post" enctype="multipart/form-data" style="margin-left: 90px; margin-top: 70px; width: 30%; font-family:'GothamRounded-Medium';">
 	  <div class="form-group">
+
+        <input type="hidden" name="id" class="form-control" value={{data.id}}>
 	    <label>Nama Anda</label>
-	    <input type="text" class="form-control" placeholder="Masukkan nama anda">
+	    <input type="text" class="form-control" name="pengupload" placeholder="Masukkan nama anda">
 	  </div>
 
-	  <div style="margin-top: 15px;">
+      {%if data.file == NULL%}
+        <div style="margin-top: 15px;">
 	  	<label>Unggah Surat</label>
 	  </div>
 
-    		<input style="font-size: 10pt;" type="file">			
+    		<input style="font-size: 10pt;" type="file" name="file">			
 
 	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
+    {%else%}
+         sudah mengupload
+    {%endif%}
+
+	  
 	  <a href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
 	</form>
 	

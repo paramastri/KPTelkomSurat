@@ -61,13 +61,7 @@ $di->set(
                 'action' => 'nomor'
             ]
         );
-        $router->addGet(
-            '/upload',
-            [
-                'controller' => 'index',
-                'action' => 'upload'
-            ]
-        );
+        
         $router->addGet(
             '/halamanadmin',
             [
@@ -117,6 +111,23 @@ $di->set(
                 'action' => 'listsurat'
             ]
         );
+
+        $router->addGet(
+            '/upload/{id}',
+            [
+                'controller' => 'index',
+                'action' => 'upload'
+            ]
+        );
+
+        $router->addPost(
+            '/storeupload',
+            [
+                'controller' => 'index',
+                'action' => 'storeupload'
+            ]
+        );
+
         $router->notFound([
             'controller' => 'index',
             'action' => 'show404'

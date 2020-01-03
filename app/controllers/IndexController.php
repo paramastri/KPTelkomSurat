@@ -91,10 +91,7 @@ class IndexController extends Controller
         $this->view->data = $data;
         
     }
-    public function uploadAction()
-    {
-        
-    }
+    
     public function halamanadminAction()
     {
         
@@ -247,6 +244,36 @@ class IndexController extends Controller
             
             $content = json_encode($data);
             return $this->response->setContent($content);
+    }
+
+    public function uploadAction($id)
+    {
+        $this->view->data = nomor_surat::findFirst("id='$id'");
+
+    }
+
+    public function storeuploadAction()
+    {
+        
+        $id = $this->request->getPost('id');
+        $surat = nomor_surat::findFirst("id='$id'");
+
+            if ($this->request->hasFiles() == true) {
+                $file = file_get_contents($_FILES['file']['tmp_name']);
+                $efile = base64_encode($file);
+            }
+
+        $surat->nama_pengupload = $this->request->getPost('pengupload');
+        $surat->file = $efile;
+        // $dokter->foto = $efile;
+        // $dokter->fotosize = $file_size;
+        // $dokter->fototype = $file_type;
+            $surat->save();
+
+        //$file->moveTo($baseLocation . $file->getName());
+
+            $this->response->redirect('detailnomor');
+
     }
 
 

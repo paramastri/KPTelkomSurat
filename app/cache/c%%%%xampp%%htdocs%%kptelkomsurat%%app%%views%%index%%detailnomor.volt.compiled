@@ -122,7 +122,11 @@
             height: "311px",
             layout: "fitColumns",
             pagination:"local",
+<<<<<<< Updated upstream
             paginationSize:10,
+=======
+            paginationSize:8,
+>>>>>>> Stashed changes
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [
@@ -134,9 +138,9 @@
                 {
                     title: "Upload Surat", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
-                        label: "Upload Surat",
-                        urlPrefix: "<?= $this->url->get('upload') ?>",
-                        // target: "_blank",
+                        label: "Klik Untuk Upload",
+                        urlPrefix: "<?= $this->url->get('upload/') ?>",
+                        target: "_blank",
                     }
                 },
             ],

@@ -122,7 +122,7 @@
             height: "311px",
             layout: "fitColumns",
             pagination:"local",
-            paginationSize:10,
+            paginationSize:8,
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [
@@ -134,9 +134,9 @@
                 {
                     title: "Upload Surat", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
-                        label: "Upload Surat",
-                        urlPrefix: "{{ url('upload') }}",
-                        // target: "_blank",
+                        label: "Klik Untuk Upload",
+                        urlPrefix: "{{ url('upload/') }}",
+                        target: "_blank",
                     }
                 },
             ],
