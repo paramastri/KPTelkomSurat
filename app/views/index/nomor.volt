@@ -84,14 +84,14 @@
                     <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="{{ url('detailnomor') }}">Upload Surat</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
+                        <!-- <li>
                             <a href="{{ url('register') }}">Register</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ url('loginadmin') }}">Login</a>
                         </li>

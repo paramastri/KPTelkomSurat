@@ -70,13 +70,13 @@
 
         <input type="hidden" name="id" class="form-control" value={{data.id}}>
         <label>Nama Anda</label>
-        <input type="text" class="form-control" name="pengupload" placeholder="Masukkan nama anda">
+        <input type="text" class="form-control" name="pengupload" placeholder="Masukkan nama anda" required>
       </div>
         <div style="margin-top: 15px;">
 	  	<label>Unggah Surat</label>
 	  </div>
 
-    		<input style="font-size: 10pt;" type="file" name="file">		
+    		<input style="font-size: 10pt;" type="file" name="file" required>		
     <div>	
 
 	  <button style="margin-top: 50px; margin-bottom: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>

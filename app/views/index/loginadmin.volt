@@ -61,14 +61,14 @@
                     <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="{{ url('detailnomor') }}">Upload Surat</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
+                        <!-- <li>
                             <a href="{{ url('register') }}">Register</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ url('loginadmin') }}">Login</a>
                         </li>
@@ -101,9 +101,12 @@
                 </div>
             </nav>
 
-
-
-            <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+            <div style="margin-left: 90px; margin-top: 30px; width: 30%; font-family:'GothamRounded-Medium';">
+            <p><?php echo $this->flashSession->output() ?></p>
+            
+            </div>
+        <div>
+            <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
 
@@ -120,7 +123,8 @@
 
                 <button value = "masuk" style="margin-top: 30px;" type="submit" class="btn btn-primary">Masuk</button>
             </form>
-
+        </div>
+</div>
 
 </body>
 

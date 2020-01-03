@@ -89,6 +89,8 @@ class IndexController extends Controller
                 $this->response->redirect('loginadmin');
             }
         }
+        $this->flashSession->error("Gagal masuk. Silakan cek kembali username dan password anda.");
+        return $this->response->redirect('loginadmin');
     }
     public function nomorAction()
     {

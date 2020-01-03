@@ -61,7 +61,7 @@
                     <a href="{{ url('') }}">Generate Nomor Surat</a>
                 </li>
                 <li>
-                    <a href="{{ url('carinomor') }}">Upload Surat</a>
+                    <a href="{{ url('detailnomor') }}">Upload Surat</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
@@ -103,7 +103,7 @@
 
 
 
-            <form action="{{ url("register") }}" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+            <form action="{{ url("register") }}" method = "post" style="margin-left: 90px; margin-top: 30px; width: 30%; font-family:'GothamRounded-Medium';">
                 <div class="form-group">
                     <label>Username</label>
                     <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
