@@ -145,12 +145,7 @@
                 },
             ],
         });
-<<<<<<< Updated upstream
         table.setData("{{ url('listsuratadmin') }}");
-=======
-        table.setData("{{ url('listsurat') }}");
-
->>>>>>> Stashed changes
     </script>
     
 </div>

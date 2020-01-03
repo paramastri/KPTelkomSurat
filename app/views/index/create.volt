@@ -113,7 +113,6 @@
                     <label>Password</label>
                     <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
                 </div>
-                <div class="errorMessage">Error message</div>
 
 
                 <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Daftar</button>

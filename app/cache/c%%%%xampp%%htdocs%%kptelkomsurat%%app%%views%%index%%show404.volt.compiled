@@ -55,7 +55,7 @@
                 <h3></h3>
             </div>
 
-            <ul style="margin-left: 10px;" class="list-unstyled">
+           <ul style="margin-left: 10px;" class="list-unstyled">
 
                 <li>
                     <a href="<?= $this->url->get('') ?>">Generate Nomor Surat</a>
@@ -91,7 +91,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Register Admin</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Error</h2>
                     <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -101,21 +101,21 @@
                 </div>
             </nav>
 
+            <div>
+                <h1 style="margin-top: 15%;text-align: center; font-weight: bold; font-family:'GothamRounded-Medium'; font-size: 100pt;">404</h1>
+                <h4 style="margin: 0 auto; text-align: center; font-weight: bold; font-family:'GothamRounded-Medium';">Maaf halaman yang anda cari tidak ditemukan.</h4>
+                
+            </div>
 
 
-            <form action="<?= $this->url->get('register') ?>" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" placeholder="Masukkan username" name="username" required>
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <a style="margin-top: 30px;" href="<?= $this->url->get('') ?>" class="btn btn-danger">Kembali</a>
                 </div>
-
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Masukkan password" name="password" required>
-                </div>
-
-
-                <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Daftar</button>
+              </div>
+            </div>
+            
             </form>
 
 
