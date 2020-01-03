@@ -90,13 +90,13 @@ $di->set(
         // );
 
 
-        $router->addGet(
-            '/storelogin',
-            [
-                'controller' => 'index',
-                'action' => 'create1'
-            ]
-        );
+        // $router->addGet(
+        //     '/adminverifikasi',
+        //     [
+        //         'controller' => 'index',
+        //         'action' => 'adminverifikasi'
+        //     ]
+        // );
 
 
         $router->addPost(

@@ -49,15 +49,15 @@ class IndexController extends Controller
         $this->response->redirect('loginadmin');
     }
 
-    public function create1Action()
-    {
-        $_isAdmin = $this->session->get('admin');
-        if ($_isAdmin) {
-            return $this->response->redirect('halamanadmin');
-        } else {
-            return $this->response->redirect('loginadmin');
-        }
-    }
+    // public function create1Action()
+    // {
+    //     $_isAdmin = $this->session->get('admin');
+    //     if ($_isAdmin) {
+    //         return $this->response->redirect('halamanadmin');
+    //     } else {
+    //         return $this->response->redirect('loginadmin');
+    //     }
+    // }
 
     public function storeloginAction()
     {
@@ -101,11 +101,55 @@ class IndexController extends Controller
     }
     
     public function halamanadminAction()
-    {
-        
+    {       
+        $id = $this->session->get('admin')['username'];
+        if ($id == NULL) {
+            // echo "berhasil login";
+            // die();
+        (new Response())->redirect('loginadmin')->send();          
+        }
+        // else{
+        //         // echo "tidak berhasil login";
+        //         // die();
+        // (new Response())->redirect('loginadmin')->send();
+        // }
     }
+        
+    // public function adminverifikasiAction()
+    // {
+    //     $_isAdmin = $this->session->get('admin');
+    //     if ($_isAdmin) {
+    //         return $this->response->redirect('halamanadmin');
+    //     } else{
+    //         return $this->response->redirect('loginadmin');
+    //     }
+    // }
+
+    // public function verifikasiAction()
+    // {
+    //     $data = Dokter::findFirst();
+    //     if ($data) {
+    //         $data->status = 1;
+    //         if ($data->save() === false) {
+    //             foreach ($data->getMessages() as $message) {
+    //                 echo $message, "\n";
+    //             }
+    //         } else {
+    //             $this->response->redirect('dokter/home');
+    //         }
+    //     }
+    // }
+
+
+
     public function lihatdetailAction($id)
-    {
+    {       
+        $user = $this->session->get('admin')['username'];
+        if ($user == NULL) {
+            // echo "berhasil login";
+            // die();
+        (new Response())->redirect('loginadmin')->send();          
+        }
         $this->view->data = nomor_surat::findFirst("id='$id'");
     }
     // public function registerAction()
