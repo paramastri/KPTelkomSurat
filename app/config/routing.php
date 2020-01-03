@@ -69,6 +69,16 @@ $di->set(
                 'action' => 'halamanadmin'
             ]
         );
+
+        $router->addGet(
+            '/halamanadmin',
+            [
+                'controller' => 'index',
+                'action' => 'create1'
+            ]
+        );
+
+
         $router->addGet(
             '/lihatdetail/{id}',
             [

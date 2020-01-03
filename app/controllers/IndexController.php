@@ -49,6 +49,16 @@ class IndexController extends Controller
         $this->response->redirect('loginadmin');
     }
 
+    public function create1Action()
+    {
+        $_isAdmin = $this->session->get('auth');
+        if ($_isAdmin) {
+            return $this->response->redirect('halamanadmin');
+        } else {
+            return $this->response->redirect('loginadmin');
+        }
+    }
+
     public function storeloginAction()
     {
         $username = $this->request->getPost('username');
@@ -72,8 +82,6 @@ class IndexController extends Controller
             }
             else{
                 $this->response->redirect('loginadmin');
-                echo "gagal";
-                die();
             }
         }
     }
