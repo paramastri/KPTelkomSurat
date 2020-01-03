@@ -46,18 +46,19 @@
 <body>
 
     <h2 style="margin-top: 90px; margin-left: 90px;">Detail {{data.nama_surat}}</h2>
-    
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Nama : {{data.name}}</li>
-                <li class="list-group-item">Nama Surat : {{data.nama_surat}}</li>
-                <li class="list-group-item">Jenis Surat : {{data.jenis_surat}}</li>
-                <li class="list-group-item">No Surat : {{data.no_surat}}</li>
-                <li class="list-group-item">Tanggal : {{data.tanggal}}</li>
-                <li class="list-group-item">File</li>
+
+            <ul style="margin-top: 40px;  margin-left: 90px; margin-right: 50%;" class="list-group">
+                <li class="list-group-item list-group-item-danger">Nama: {{data.name}}</li>
+                <li class="list-group-item list-group-item-danger">Nama Surat: {{data.nama_surat}}</li>
+                <li class="list-group-item list-group-item-danger">Jenis Surat: {{data.jenis_surat}}</li>
+                <li class="list-group-item list-group-item-danger">No Surat: {{data.no_surat}}</li>
+                <li class="list-group-item list-group-item-danger">Tanggal: {{data.tanggal}}</li>
+                <li class="list-group-item list-group-item-danger"><a  href="#" class="btn btn-primary">Download File Surat</a> </li>
             </ul>
+
           
 
-            <a href="{{ url('halamanadmin') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</a>
+            <a href="{{ url('halamanadmin') }}" style="margin-top: 50px; margin-left: 90px;" class="btn btn-danger">Kembali</a>
 
 
 </body>

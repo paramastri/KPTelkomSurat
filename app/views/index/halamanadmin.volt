@@ -145,7 +145,7 @@
                 {
                     title: "Status", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",
-                        label: "Status",
+                        label: "Lihat Status",
                         urlPrefix: "{{ url('') }}",
                         // target: "_blank",
                     }
