@@ -30,7 +30,12 @@ class IndexController extends Controller
 
     public function loginadminAction()
     {
-        
+        $id = $this->session->get('admin')['username'];
+        if ($id != NULL) {
+            // echo "berhasil login";
+            // die();
+        (new Response())->redirect('halamanadmin')->send();          
+        }
     }
 
     public function storeAction(){
