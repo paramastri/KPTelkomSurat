@@ -235,6 +235,7 @@ class IndexController extends Controller
                 
                     $data[] = array(
                         'no_surat' => $surat->no_surat,
+                        'tanggal' => $surat->tanggal,
                         'nama' => $surat->name,
                         'nama_surat' => $surat->nama_surat,
                         'jenis_surat' => $jenissurat,

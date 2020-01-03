@@ -96,7 +96,7 @@
 <!--                         <a href="{{ url('logout') }}">
                             Logout
                         </a> -->
-                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang Bos, {{ session.get('admin')['username'] }}!</h2>
+                    <h2 style="font-family:'GothamRounded-Medium'; float: right;">Selamat Datang, {{ session.get('admin')['username'] }}!</h2>
                    <!--  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button> -->
@@ -125,7 +125,7 @@
             height: "311px",
             layout: "fitColumns",
             pagination:"local",
-            paginationSize:1,
+            paginationSize:10,
             layout:"fitColumns",
             placeholder: "Tidak Ada Data",
             columns: [
@@ -152,7 +152,7 @@
                 },
             ],
         });
-        table.setData("{{ url('') }}");
+        table.setData("{{ url('listsurat') }}");
     </script>
     
 </div>
