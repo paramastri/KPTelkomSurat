@@ -101,12 +101,18 @@
                 </div>
             </nav>
 
+<<<<<<< Updated upstream
             <div style="margin-left: 90px; margin-top: 30px; width: 30%; font-family:'GothamRounded-Medium';">
             <p><?php echo $this->flashSession->output() ?></p>
             
             </div>
         <div>
             <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 50px; width: 30%; font-family:'GothamRounded-Medium';">
+=======
+            <div>{{ flashSession.output() }}</div>
+            
+            <form action="{{ url("storelogin") }}" method = "post" style="margin-left: 90px; margin-top: 100px; width: 30%; font-family:'GothamRounded-Medium';">
+>>>>>>> Stashed changes
                 <div class="form-group">
                     <label>Username</label>
 

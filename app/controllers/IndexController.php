@@ -4,6 +4,7 @@ use Phalcon\Mvc\Controller;
 use Phalcon\Http\Response;
 use Phalcon\Mvc\Dispatcher;
 use App\Events\AdminProtectController;
+use Phalcon\Flash\Session as Flash;
 
 
 // use App\Events\UserProtectController;
@@ -42,6 +43,11 @@ class IndexController extends Controller
         $admin = new admin();
         $admin->username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
+        $user = admin::findFirst("username = '$admin->username'");
+        if ($user) { 
+            echo "Sudah ada username";
+            die();
+        }
         // echo $password;
         // die();
         $admin->password = $this->security->hash($password);
@@ -87,10 +93,9 @@ class IndexController extends Controller
             }
             else{
                 $this->response->redirect('loginadmin');
+                $this->flashSession->warning('Password Salah');
             }
         }
-        $this->flashSession->error("Gagal masuk. Silakan cek kembali username dan password anda.");
-        return $this->response->redirect('loginadmin');
     }
     public function nomorAction()
     {
