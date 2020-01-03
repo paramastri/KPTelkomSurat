@@ -96,6 +96,10 @@ class IndexController extends Controller
     {
         
     }
+    public function lihatdetailAction()
+    {
+        
+    }
     // public function registerAction()
     // {
         
