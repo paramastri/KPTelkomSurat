@@ -70,14 +70,6 @@ $di->set(
             ]
         );
 
-        $router->addGet(
-            '/halamanadmin',
-            [
-                'controller' => 'index',
-                'action' => 'create1'
-            ]
-        );
-
 
         $router->addGet(
             '/lihatdetail/{id}',
@@ -96,6 +88,16 @@ $di->set(
         //         'action' => 'register'
         //     ]
         // );
+
+
+        $router->addGet(
+            '/storelogin',
+            [
+                'controller' => 'index',
+                'action' => 'create1'
+            ]
+        );
+
 
         $router->addPost(
             '/storelogin',
