@@ -49,7 +49,7 @@
 
 
 
-	<form action="{{ url("storeupload") }}" method = "post" enctype="multipart/form-data" style="margin-left: 90px; margin-top: 40px; width: 30%; font-family:'GothamRounded-Medium';">
+	<form action="{{ url("storeupload") }}" method = "post" enctype="multipart/form-data" style="margin-left: 90px; margin-top: 40px; width: 25%; font-family:'GothamRounded-Medium';">
 	  
 
       {%if data.file == NULL%}
@@ -59,11 +59,14 @@
           Surat ini telah <a class="alert-link">berhasil diunggah</a> oleh <a class="alert-link">{{data.nama_pengupload}}</a>.
         </div>
 
-        <div class="alert alert-danger" role="alert">
+        <div style="font-size: 10pt;" class="alert alert-danger" role="alert">
           Apabila ingin mengubah file yang telah diunggah, silahkan mengunggah kembali pada form di bawah.
         </div>
       {% endif %}
       <div  class="form-group">
+        <div style="font-size: 10pt;" class="alert alert-primary" role="alert">
+          Ukuran file <a class="alert-link">maksimal 2 MB</a><br>Pastikan file yang diunggah berekstensi <a class="alert-link">.pdf atau .jpg</a>.
+        </div>
 
         <input type="hidden" name="id" class="form-control" value={{data.id}}>
         <label>Nama Anda</label>
@@ -76,8 +79,8 @@
     		<input style="font-size: 10pt;" type="file" name="file">		
     <div>	
 
-	  <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
-	  <button href="{{ url('detailnomor') }}" style="margin-top: 50px;" class="btn btn-danger">Kembali</button>
+	  <button style="margin-top: 50px; margin-bottom: 50px;" type="submit" class="btn btn-primary">Unggah Surat</button>
+	  <button href="{{ url('detailnomor') }}" style="margin-top: 50px; margin-bottom: 50px;"" class="btn btn-danger">Kembali</button>
     </div>
 	</form>
 
