@@ -134,7 +134,7 @@
                 {title: "No Surat", field: "no_surat"},
                 {title: "Nama Surat", field: "nama_surat"},
                 {title: "Jenis Surat", field: "jenis_surat"},
-                {title: "Status Upload", field: "status"},
+                {title: "Status Unggah", field: "status"},
                 {
                     title: "Lihat Detail", field: "link", formatter: "link", formatterParams: {
                         labelField: "name",

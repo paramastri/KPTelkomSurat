@@ -73,7 +73,7 @@
                 <li class="list-group-item list-group-item-primary">Nama Pengunggah: {{data.nama_pengupload}}</li>
                 <li class="list-group-item list-group-item-primary"><a  href="../download/{{data.id}}" class="btn btn-primary">Download File Surat</a> </li>
                 {% else %}
-                File belum diupload
+                <li class="list-group-item list-group-item-danger">File belum diunggah</li>
                 {% endif %}
                 
             </ul>

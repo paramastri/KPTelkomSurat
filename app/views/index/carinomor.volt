@@ -105,8 +105,8 @@
 	<form action="{{ url('detailnomor') }}" style="margin-left: 90px; margin-top: 0px; width: 30%; font-family:'GothamRounded-Medium';">
 	
 
-
-	  <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Lihat Daftar Surat Disini</button>
+        <a style="margin-top: 30px;" href="{{ url('') }}" class="btn btn-success">Generate Nomor Surat Disini</a>
+	  <button style="margin-top: 20px;" type="submit" class="btn btn-primary">Lihat Daftar Surat Disini</button>
 	</form>
 	
 
